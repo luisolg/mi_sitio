@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PWEB_curso de HTML</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e8f0fe;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        header {
+            background-color: #173b70;
+            color: white;
+            padding: 25px;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 30px;
+        }
+
+        .contenedor {
+            width: 85%;
+            max-width: 900px;
+            margin: 30px auto;
+            background-color: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 0 10px gray;
+        }
+
+        button {
+            background-color: #2874a6;
+            color: white;
+            border: none;
+            padding: 15px 20px;
+            margin: 10px;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #154360;
+        }
+
+        #resumen {
+            display: none;
+            text-align: left;
+            margin-top: 25px;
+            padding: 20px;
+            background-color: #f2f6fc;
+            border-radius: 10px;
+            line-height: 1.7;
+        }
+
+        h2 {
+            color: #173b70;
+            text-align: center;
+        }
+
+        h3 {
+            color: #2874a6;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>PWEB_curso de HTML</h1>
+        <p>Resumen del curso de HTML</p>
+    </header>
+
+    <div class="contenedor">
+
+        <h2>Selecciona el resumen que deseas consultar</h2>
+
+        <button onclick="mostrarResumen(1)">
+            Páginas 1 a 10
+        </button>
+
+        <button onclick="mostrarResumen(2)">
+            Páginas 11 a 20
+        </button>
+
+        <button onclick="mostrarResumen(3)">
+            Páginas 21 a 31
+        </button>
+
+        <div id="resumen"></div>
+
+    </div>
+
+    <script>
+
+        function mostrarResumen(numero) {
+
+            let contenido = document.getElementById("resumen");
+
+            contenido.style.display = "block";
+
+            if (numero === 1) {
+
+                contenido.innerHTML = `
+                    <h2>Resumen de las páginas 1 a 10</h2>
+
+                    <h3>1. Introducción a HTML</h3>
+                    HTML es un lenguaje utilizado para crear páginas web.
+                    Permite organizar y presentar información mediante etiquetas.
+
+                    <h3>2. Estructura básica</h3>
+                    Se explica cómo organizar un documento HTML utilizando
+                    etiquetas principales como HTML, HEAD, TITLE y BODY.
+
+                    <h3>3. Formato de texto</h3>
+                    Se muestran etiquetas para modificar la apariencia
+                    del texto, como negritas, cursivas, encabezados y párrafos.
+
+                    <h3>4. Caracteres especiales</h3>
+                    Se explica cómo representar caracteres especiales
+                    que no se escriben directamente en HTML.
+
+                    <h3>5. Enlaces</h3>
+                    Se utilizan enlaces para conectar una página con
+                    otras páginas o sitios de Internet.
+
+                    <h3>6. Imágenes</h3>
+                    Se aprende a insertar imágenes dentro de una página
+                    web y modificar sus características.
+
+                    <h3>7. Alineación y tamaño</h3>
+                    Se explica cómo cambiar la alineación y las dimensiones
+                    de las imágenes.
+
+                    <h3>8. Fondos y colores</h3>
+                    Se muestran formas de colocar colores e imágenes
+                    como fondo de una página.
+
+                    <h3>9. Tablas</h3>
+                    Se introduce la creación de tablas para organizar
+                    información en filas y columnas.
+
+                    <h3>10. Formularios y mapas</h3>
+                    Se presenta el uso de formularios para recopilar
+                    información y mapas para identificar zonas dentro
+                    de una imagen.
+                `;
+
+            } else if (numero === 2) {
+
+                contenido.innerHTML = `
+                    <h2>Resumen de las páginas 11 a 20</h2>
+
+                    <h3>1. Imágenes</h3>
+                    Se continúa explicando cómo insertar imágenes,
+                    modificar sus dimensiones y establecer su alineación.
+
+                    <h3>2. Fondos</h3>
+                    Se explica cómo personalizar el fondo de una página
+                    mediante colores e imágenes.
+
+                    <h3>3. Tablas</h3>
+                    Se aprende a crear y organizar tablas utilizando
+                    filas, columnas y celdas.
+
+                    <h3>4. Diseño de tablas</h3>
+                    Se muestran opciones para modificar la presentación
+                    de las tablas y organizar mejor su contenido.
+
+                    <h3>5. Formularios</h3>
+                    Se explica cómo crear formularios para que los
+                    visitantes puedan introducir información.
+
+                    <h3>6. Campos de texto</h3>
+                    Se utilizan campos donde las personas pueden escribir
+                    datos como nombres y otra información.
+
+                    <h3>7. Menús de selección</h3>
+                    Se presentan opciones para seleccionar información
+                    dentro de un formulario.
+
+                    <h3>8. Casillas de verificación</h3>
+                    Se utilizan casillas conocidas como checkbox,
+                    que permiten seleccionar una o varias opciones.
+
+                    <h3>9. Organización de formularios</h3>
+                    Se muestra cómo combinar diferentes elementos
+                    para crear formularios más completos.
+
+                    <h3>10. Aplicaciones</h3>
+                    Los formularios permiten recopilar datos y facilitar
+                    la comunicación entre los usuarios y una página web.
+                `;
+
+            } else if (numero === 3) {
+
+                contenido.innerHTML = `
+                    <h2>Resumen de las páginas 21 a 31</h2>
+
+                    <h3>1. Botones de opción</h3>
+                    Se explican los botones radio, que permiten seleccionar
+                    una opción entre varias disponibles.
+
+                    <h3>2. Botones de formulario</h3>
+                    Se utilizan botones para enviar o restablecer
+                    la información de un formulario.
+
+                    <h3>3. Combinación de formularios</h3>
+                    Se muestra cómo integrar distintos elementos
+                    para crear formularios más completos.
+
+                    <h3>4. Libro de visitas</h3>
+                    Se presenta un ejemplo de formulario que permite
+                    a los visitantes escribir información y comentarios.
+
+                    <h3>5. Mapas interactivos</h3>
+                    Se explica cómo utilizar imágenes con diferentes
+                    zonas activas que pueden funcionar como enlaces.
+
+                    <h3>6. Frames o marcos</h3>
+                    Se introduce el uso de marcos para dividir una ventana
+                    del navegador en diferentes secciones.
+
+                    <h3>7. Atributos de frames</h3>
+                    Se explican características que permiten configurar
+                    los marcos y su presentación.
+
+                    <h3>8. Frames anidados</h3>
+                    Se muestra cómo organizar marcos dentro de otros
+                    marcos para crear diferentes distribuciones.
+
+                    <h3>9. Sonidos en HTML</h3>
+                    Se explica cómo agregar sonidos a una página web
+                    mediante diferentes etiquetas.
+
+                    <h3>10. Sonido de fondo</h3>
+                    Se presentan las etiquetas BGSOUND y EMBED
+                    para incorporar sonidos y archivos de audio.
+
+                    <h3>11. Enlaces de audio</h3>
+                    Se explica cómo colocar enlaces que permiten
+                    abrir o reproducir archivos de sonido.
+                `;
+
+            }
+
+        }
+
+    </script>
+<marquee> detx-dominico <marquee/>
+</body>
+</html>
